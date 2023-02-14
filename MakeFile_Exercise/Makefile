@@ -35,7 +35,7 @@ default: app
 
 distclean: clean
 	$(QUIET)$(ECHO) "removing app....!"
-	$(QUIET)$(RM) -f "app"
+	$(QUIET)$(RM) -f app
 
 clean:
 	$(QUIET)$(ECHO) "removing all object files!"
