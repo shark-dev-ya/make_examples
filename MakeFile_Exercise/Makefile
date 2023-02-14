@@ -15,6 +15,7 @@ OBJECTS := $(SOURCES:.cpp=.o)
 app: $(OBJECTS)
 	$(QUIET)$(ECHO) "building app!"
 	$(QUIET)$(CC) -o $@ $^
+	$(QUIET)$(RM) -f *.o
 
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 %.o: %.cpp 
@@ -39,4 +40,8 @@ distclean: clean
 clean:
 	$(QUIET)$(ECHO) "removing all object files!"
 	$(QUIET)$(RM) -f *.o
+
+	
+
+
 
