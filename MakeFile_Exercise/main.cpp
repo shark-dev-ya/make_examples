@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[]) {
 
-    std::cout << "Your advertisment could be here..." 
+    std::cout << "Your advertisement could be here..."
               << std::endl;
 
     std::cout << "sum_of_ints(5,5) = " 
