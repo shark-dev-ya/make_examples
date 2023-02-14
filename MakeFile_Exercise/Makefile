@@ -6,7 +6,7 @@ ECHO := echo
 RM := rm
 INSTALL_DIR ?= installation_prefix
 
-SOURCES := main.cpp utilities_floats.cpp utilities_ints.cpp
+SOURCES := main.cpp utilites_floats.cpp utilites_ints.cpp
 OBJECTS := $(SOURCES:.cpp=.o)
 
 # $@ is the name of file being created by the rule.
@@ -19,7 +19,7 @@ app: $(OBJECTS)
 # https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 %.o: %.cpp 
 	$(QUIET)$(ECHO) "compiling $< ..."
-	$(CC) $(CXXFLAGS) -o "$@" -c $<
+	$(CC) $(CXXFLAGS) -o $@ -c $<
 
 install_dir:
 	$(QUIET)if [ ! -d "$(INSTALL_DIR)" ]; then mkdir "$(INSTALL_DIR)" ; fi
@@ -34,9 +34,9 @@ default: app
 
 distclean: clean
 	$(QUIET)$(ECHO) "removing app....!"
-	$(QUIET)$(RM) -f "$(BUILD_DIR)/app"
+	$(QUIET)$(RM) -f "app"
 
 clean:
 	$(QUIET)$(ECHO) "removing all object files!"
-	$(QUIET)$(RM) -f "$(BUILD_DIR)/*.o"
+	$(QUIET)$(RM) -f *.o
 
