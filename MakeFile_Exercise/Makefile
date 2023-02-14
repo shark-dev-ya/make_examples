@@ -26,7 +26,7 @@ install_dir:
 	$(QUIET)if [ ! -d "$(INSTALL_DIR)" ]; then echo "$(INSTALL_DIR) is not created" ; exit 1 ; fi
 
 install: install_dir
-	install -m 755 app "$(INSTALL_DIR)/app"
+	install -m 755 app "$(INSTALL_DIR)/math_app"
 
 default: app
 
